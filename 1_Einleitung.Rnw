@@ -14,11 +14,28 @@ Wie \cite{nachname_2005} berichtet, siehe auch Abbildung \ref{fig:Beispiel.png},
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
 
-<<external-code, cache=FALSE, echo=FALSE>>=
-read_chunk('test.R')
+<<cache=FALSE, echo=FALSE>>=
+read_chunk('pisa.R')
 @
 
-<<mtcars, echo=FALSE>>=
+<<pisa, echo=FALSE>>=
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+tabelle<-rbind(tbl1, tbl2, tbl3)
+latex(
+  tabelle,
+  file="",
+  col.just = strsplit("cccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  rgroup = c("Migrationshintergrund", "Sprachgebrauch zu Hause", "Bildungsniveau der Eltern"),
+  n.rgroup=c(3, 2, NROW(tabelle)-5), 
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle)),
+  caption="Hallo Welt!"
+)
 @
 
 \subsubsection{Unterunterkapitel}

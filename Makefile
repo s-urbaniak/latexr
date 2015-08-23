@@ -40,7 +40,7 @@ $(CACHEDIR):
 $(FIGUREDIR):
 	mkdir $(FIGUREDIR)
 
-%.tex: %.Rnw *.Rnw
+%.tex: %.Rnw *.Rnw *.R
 	Rscript \
 	  -e "library(knitr)" \
 	  -e "knitr::opts_chunk[['set']](fig.path='$(FIGUREDIR)/$*-')" \
