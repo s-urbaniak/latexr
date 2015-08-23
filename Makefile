@@ -40,13 +40,12 @@ $(CACHEDIR):
 $(FIGUREDIR):
 	mkdir $(FIGUREDIR)
 
-%.tex:%.Rnw
+%.tex: %.Rnw *.Rnw
 	Rscript \
 	  -e "library(knitr)" \
 	  -e "knitr::opts_chunk[['set']](fig.path='$(FIGUREDIR)/$*-')" \
 	  -e "knitr::opts_chunk[['set']](cache.path='$(CACHEDIR)/$*-')" \
 	  -e "knitr::knit('$<','$@')"
-
 
 %.R:%.Rnw
 	Rscript -e "Sweave('$^', driver=Rtangle())"
@@ -55,7 +54,7 @@ $(FIGUREDIR):
 	R CMD BATCH "$^" "$@"
 
 %.pdf: %.tex 
-	latexmk -pdf $<
+	latexmk -pdf -halt-on-error $<
 	
 clean:
 	-latexmk -c -quiet $(MAINFILE).tex
