@@ -13,7 +13,6 @@
 
 \usepackage[scaled]{beramono} % Monospace Font im Dokument
 \usepackage{libertine}
-\renewcommand*\familydefault{\sfdefault}  %% Only if the base font of the document is to be sans serif
 
 \usepackage{microtype}		% echter Blocksatz
 \usepackage{fixltx2e}		% Verbessert einige Kernkompetenzen von LaTeX2e
