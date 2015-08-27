@@ -23,18 +23,66 @@ read_chunk('pisa.R')
 
 <<results="asis", echo=FALSE, message=FALSE>>=
 library(Hmisc)
-tabelle<-rbind(tbl1, tbl2, tbl3)
+tabelle1<-rbind(tabelle1_1, tabelle1_2)
 latex(
-  tabelle,
+  tabelle1,
   file="",
   col.just = strsplit("cccc", "")[[1]],
   rowlabel="",
   rowlabel.just="r", 
-  rgroup = c("Migrationshintergrund", "Sprachgebrauch zu Hause", "Bildungsniveau der Eltern"),
-  n.rgroup=c(3, 2, NROW(tabelle)-5), 
+  rgroup = c("Migrationshintergrund", "Sprachgebrauch zu Hause"),
+  n.rgroup=c(3, 2), 
   booktabs = TRUE,
-  rowname = latexTranslate(rownames(tabelle)),
-  caption="Hallo Welt!"
+  rowname = latexTranslate(rownames(tabelle1)),
+  caption="Häufigkeiten für Migrationshintergrund und Sprachgebrauch zuhause (N=3873)"
+)
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+latex(
+  tabelle2,
+  file="",
+  col.just = strsplit("cccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  cgroup=c("absolute Häufigkeiten", "prozentual"),
+  n.cgroup=c(2, 2),
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle2)),
+  caption="Sprachgebrauch zuhause nach Migrationshintergrund"
+)
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+latex(
+  tabelle3,
+  file="",
+  col.just = strsplit("cccccccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  rgroup = c("HISCED", "Bücher zuhause"),
+  n.rgroup=c(5, 6), 
+  cgroup=c("Häufigkeiten", "Lage und Streuungmasse"),
+  n.cgroup=c(2, 6),
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle3)),
+  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause"
+)
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+latex(
+  tabelle4,
+  file="",
+  col.just = strsplit("ccccccccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle4)),
+  caption="Leseleistung nach Migrationshintergrund (MHG)"
 )
 @
 

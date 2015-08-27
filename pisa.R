@@ -3,10 +3,10 @@
 load("pisa.rda")
 #in dem Datensatz befinden sich Daten von 4979 Personen. Da nicht für alle Personnen auf allen Variablen die für diese Arbeit relevant sind (mig,sprache,hisced,buecher) gültige Werte vorligen endscheide ich mich diese Personen aus dan Analysen auszuschliessen. 
 
-#table(pisa$hisced)
 pisa$hisced[pisa$hisced=="None"] <- NA # None bei hisced auf fehlend setzen
+
+
 no.mis <- is.na(pisa$mig)==FALSE & is.na(pisa$sprache)==FALSE & is.na(pisa$hisced)==FALSE & is.na(pisa$buecher)==FALSE 
-#table(no.mis)
 
 pisa.nm <- pisa[no.mis,] #Datensatz mit Personen ohne fehlende Werte bei allen relewanten Variablen
 # in die Analysn gehen 1106 Personen nicht ein. Weitere Berechnungen werden mit 3873 Fällen vorgenommen.
@@ -23,52 +23,90 @@ relativ<-prop.table(absolut)
 prozent<-100*relativ
 kumuliert<-cumsum(prozent)
 heufigkeiten<-cbind(absolut,relativ,prozent,kumuliert)
-
-tbl1<-round(heufigkeiten,2)
-
-#die meisten Jugentliche haben keinen Migrationshintergrund (ca.88 %). Der Anteil der Schülerinen und Schüller die selbst nicht in Deutschland geboren sind (erste Generation) und Jugentlichen von denen nur die Eltern zugewandert sind (zweite Generation)  beträgt endsprechend 4 und 8 %. Das Heisst 12% der Jugentlichen hat Migrationshintergrund. Die Gruppe der Jugentlichen mit Migrationshintergrund, die  in deutschland geboren sind ist fast doppelt so gross wie deren, die selbst auch zugewandert sind. 
-
+tabelle1_1<-round(heufigkeiten,2)
+ 
 #Heufigkeitsttabele für Sprachgebrauch zu Hause
 absolut<-table(pisa.nm$sprache)
 relativ<-prop.table(absolut)
 prozent<-100*relativ
 kumuliert<-cumsum(prozent)
 heufigkeiten<-cbind(absolut,relativ,prozent,kumuliert)
-
-tbl2<-round(heufigkeiten,2)
+tabelle1_2<-round(heufigkeiten,2)
 
 #Die meisten Jugentliche benutzten zuhause Deutsch als Familiensprache- ca.92%. 8% der Jungen und Mädschen spechen bei sich zuahuse eine andere Sprache.
 #hierzu ist interesant die Frage wie sich die Nutzung der nichtdeutchen Sprache in abhängigkeit von Migrationshintergrund verteilt:
 
-#table(pisa.nm$mig, pisa.nm$sprache) #sprachgebrauch nach Migrationshintergrund
 absolut<-table(pisa.nm$mig, pisa.nm$sprache)
 relativ<-prop.table(absolut)
 prozent<-100*relativ
 kumuliert<-cumsum(prozent)
 heufigkeiten<-cbind(absolut,prozent)
-#round(heufigkeiten,2)
+tabelle2<-round(heufigkeiten,2)
 
-#unter den Jugentlichen ohne Migrationshintergrung geben 1,5 % an, eine andere Sprache zuhausese zu benutzen als deutsch. Es lässt sich damit zu ekrären, dass in dem Datensatz jugentliche mit nur einem im Ausland geborenen Elternteil zu den Jugentlichen ohne Migraionshintergrund gerechnet werden. In der Gruppe der Jugentlichen deren Eltern zugewandert sind, sie selbst aber in Deutschland geboren sind sprechen fast gleich soviele Deutsch zuhause wie eine andere Sprache. Unter den Jugentlichen deren Geburtsland nicht Deutschland ist, sprechen die meisten ein andere Sprache als Deutsch. 
+#unter den Jugentlichen ohne Migrationshintergrung geben 1,5 % an, eine andere Sprache zuhausese zu benutzen als deutsch. 
 
-#Heufigkeitsttabele für Bildungsviveu der Eltern (hisced)
-
-absolut<-table(pisa.nm$hisced)
-relativ<-prop.table(absolut)
-prozent<-100*relativ
-kumuliert<-cumsum(prozent)
-heufigkeiten<-cbind(absolut,relativ,prozent,kumuliert)
-#round(heufigkeiten,2)
-
-#es erscheint immer noch die Kategorie "None". In der Stichprobe gibt nur 3 Personen die der Kategorie "ISCED 1" zugeordnet worden sind würden "ISCED 1" und  "ISCED 2" zusammengefasst. Die variable enthelt jetzt 5 susprägungen von 1 - Level 1 bis 5 - Level 5 
+#es erscheint immer noch die Kategorie "None".In der Stichprobe gibt nur 3 Personen die der Kategorie "ISCED 1" zugeordnet worden sind würden "ISCED 1" und  "ISCED 2" zusammengefasst. Die variable enthelt jetzt 5 susprägungen von 1 - Level 1 bis 5 - Level 5 
 library(plyr)
-pisa.nm$hisced.r <- revalue(pisa.nm$hisced, c("ISCED 1" = "ISCED 1+2",
-                                              "ISCED 2" = "ISCED 1+2"))
+pisa.nm$hisced.r <- revalue(pisa.nm$hisced, c("None" = "ISCED 1+2",
+                                              "ISCED 1" = "ISCED 1+2",
+                                              "ISCED 2" = "ISCED 1+2" ))
+
 
 absolut<-table(pisa.nm$hisced.r)
 relativ<-prop.table(absolut)
 prozent<-100*relativ
 kumuliert<-cumsum(prozent)
-heufigkeiten<-cbind(absolut,relativ,prozent,kumuliert)
+heufigkeiten<-cbind(absolut,relativ)
+tabelle3_1<-round(heufigkeiten,2)
 
-#[-1,] ist das komplemaentere dataset zu zeile 1 -> "alles ausser zeile"
-tbl3<-round(heufigkeiten,2)[-1,]
+pisa.nm$hisced.v <- as.numeric(pisa.nm$hisced.r)
+
+#Häufigkeiten Büchervariable
+
+absolut<-table(pisa.nm$buecher)
+relativ<-prop.table(absolut)
+prozent<-100*relativ
+kumuliert<-cumsum(prozent)
+heufigkeiten<-cbind(absolut,relativ)
+tabelle3_2<-round(heufigkeiten,2)
+
+tabelle3<-rbind(tabelle3_1, tabelle3_2)
+
+df<-data.frame(
+	c("X"," "," "," "," ","X"," "," "," "," "," "),
+	c(" ","X"," "," "," "," "," ","X"," "," "," "),
+	c(" "," ","X"," "," "," "," ","X"," "," "," "),
+	c(" "," "," "," ","X"," "," "," "," ","X"," "),
+	c(" "," "," "," ","X"," "," "," "," "," ","X"),
+	c(" "," "," "," ","X"," "," ","X"," "," "," ")
+)
+colnames(df) <- c("Min.", "1 Qu.", "Md", "3 Qu.", "Max.", "Mo")
+tabelle3<-cbind(tabelle3, df)
+
+t4<-rbind(t(rbind(
+  tapply(pisa.nm$lesen, pisa.nm$mig, min),
+  tapply(pisa.nm$lesen, pisa.nm$mig, quantile, probs=0.25),
+  tapply(pisa.nm$lesen, pisa.nm$mig, mean),
+  tapply(pisa.nm$lesen, pisa.nm$mig, median),
+  tapply(pisa.nm$lesen, pisa.nm$mig, quantile, probs=0.75),
+  tapply(pisa.nm$lesen, pisa.nm$mig, max),
+  tapply(pisa.nm$lesen, pisa.nm$mig, IQR),
+  tapply(pisa.nm$lesen, pisa.nm$mig, sd),
+  tapply(pisa.nm$lesen, pisa.nm$mig, var)
+)),
+c(
+  min(pisa.nm$lesen),
+  quantile(pisa.nm$lesen, probs=0.25),
+  mean(pisa.nm$lesen),
+  median(pisa.nm$lesen),
+  quantile(pisa.nm$lesen, probs=0.75),
+  max(pisa.nm$lesen),
+  IQR(pisa.nm$lesen),
+  sd(pisa.nm$lesen),
+  var(pisa.nm$lesen)
+))
+
+colnames(t4) <- c("Min", "1 Qu.", "Mean", "Md", "3 Qu.", "Max", "Qdiff", "SD", "Var")
+rownames(t4)[4] <- "Gesamt"
+t4<-round(t4,1)
+tabelle4<-t4
