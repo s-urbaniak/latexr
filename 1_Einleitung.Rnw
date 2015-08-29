@@ -68,7 +68,10 @@ latex(
   n.cgroup=c(2, 6),
   booktabs = TRUE,
   rowname = latexTranslate(rownames(tabelle3)),
-  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause"
+  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause",
+  insert.bottom="\\footnotesize{Anmerkung: Mo – Modus, Md – Median
+
+Zuordnung der ISCED Kategorien: 1. ISCED1,2=max.Haupt o. Realschule ohne Berufsausbildung / 2. ISCED 3B,C=Hauptschule und Lehre /3. SCED 3A, 4=Realschule und Fachschule /I4. SCED 5B=Abitur ohne Hochschule / 5.ISCED 5A, 6=min. Hochschulabschluss }"
 )
 @
 
@@ -84,6 +87,35 @@ latex(
   rowname = latexTranslate(rownames(tabelle4)),
   caption="Leseleistung nach Migrationshintergrund (MHG)"
 )
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(stargazer)
+stargazer(model1, model2, model3, model4,
+  title="Results",
+  summary = FALSE,
+  no.space=TRUE,
+  digits=2,
+  dep.var.labels.include=FALSE,
+  keep.stat=c("rsq"),
+  notes.label="Anmerkung",
+  single.row=TRUE
+)
+@
+
+<<echo=FALSE, fig.cap="Test test", fig.height=6, out.width='\\textwidth'>>=
+boxplot(pisa.nm$lesen~pisa.nm$mig, col=c("royalblue2", "palevioletred1", "sienna"))
+abline(h=200, col="grey", lty=3)
+abline(h=250, col="grey", lty=3)
+abline(h=300, col="grey", lty=3)
+abline(h=350, col="grey", lty=3)
+abline(h=400, col="grey", lty=3)
+abline(h=450, col="grey", lty=3)
+abline(h=500, col="grey", lty=3)
+abline(h=550, col="grey", lty=3)
+abline(h=600, col="grey", lty=3)
+abline(h=650, col="grey", lty=3)
+abline(h=700, col="grey", lty=3)
 @
 
 \subsubsection{Unterunterkapitel}

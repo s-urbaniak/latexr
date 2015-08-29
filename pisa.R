@@ -110,3 +110,8 @@ colnames(t4) <- c("Min", "1 Qu.", "Mean", "Md", "3 Qu.", "Max", "Qdiff", "SD", "
 rownames(t4)[4] <- "Gesamt"
 t4<-round(t4,1)
 tabelle4<-t4
+
+model1<-lm(pisa.nm$lesen ~ pisa.nm$mig)
+model2<-lm(pisa.nm$lesen ~pisa.nm$mig + pisa.nm$sprache)
+model3<-lm(pisa.nm$lesen ~pisa.nm$mig + pisa.nm$sprache + pisa.nm$hisced.r)
+model4<-lm(pisa.nm$lesen ~pisa.nm$mig + pisa.nm$sprache + pisa.nm$hisced.r + pisa.nm$buecher)
