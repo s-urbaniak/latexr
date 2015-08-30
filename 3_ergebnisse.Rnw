@@ -170,20 +170,11 @@ dass sich mindestens zwei von den Gruppen signifikant voreinander unterscheiden.
 
 \subsection{Einfluss des Migrationshintergrundes auf die Leseleistung der Jugendlichen – einfache lineare Regression.}
 
-<<results="asis", echo=FALSE, message=FALSE>>=
-library(stargazer)
-stargazer(model1, model2, model3, model4,
-  title="Results",
-  summary = FALSE,
-  no.space=TRUE,
-  digits=2,
-  dep.var.labels.include=FALSE,
-  keep.stat=c("rsq"),
-  notes.label="Anmerkung",
-  single.row=TRUE,
-  label="tabelle5"
-)
-@
+\begin{table}[!htbp]
+  \caption{Regression der Leseleistung auf Migrationshintergrund, Sprachgebrauch zuhause, Höchster ISCED in Familie und Anzahl der Bücher zuhause (N=3873)}
+  \label{tabelle5}
+  \includegraphics[page=1,width=\textwidth]{tabelle5}
+\end{table} 
 
 Der Achsenabschnitt bei Model 1 (Tabelle \ref{tabelle5}) liegt bei 516.12.
 Die geschätzte Leseleistung eines Schülers ohne Migrationshintergrund beträgt 516.12 Punkte.
