@@ -1,121 +1,57 @@
-\subsection{Unterkapitel 1}
+\section{Einleitung, Fragestellung und Hypothesen}
 
-%Beispiele
-Wie \cite{nachname_2005} berichtet, siehe auch Abbildung \ref{fig:Beispiel.png}, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet \citep[vgl.][gemäß freundlicher persönlicher Mitteilung]{nachname_2005}.
+Jugendliche aus zugewanderten Familien sind weniger erfolgreich
+in dem deutschen Bildungssystem
+als Schülerinnen und Schüler ohne Migrationshintergrund.
+Das ist ein immer wieder bestätigter Befund (\cite{klieme_pisa_2010}).
+Die Ergebnisse der PISA Erhebungen weisen seit 2000
+immer wieder auf die Kompetenznachteile dieser Gruppe hin.
+Im Angesicht der hohen Zuwanderungszahlen
+sowie des demographischen Wandels
+ist die Frage nach den Faktoren,
+die herkunftbedingte Disparitäten beeinflussen,
+hochaktuell.
+Kompetenznachteile der Jugendlichen mit Migrationshintergrund
+sind sowohl in der ersten als auch zweiter Generation zu beobachten.
+Die in verschiedenen Studien festgestellten Kompetenznachteile
+können durch eine Vielzahl von Faktoren bedingt sein.
+In der Literatur sind viele Erklärungsansätze
+für die Bildungsbenachteiligung von Schülerinnen und Schülern
+mit Migrationshintergrund zu finden.
+Lesekompetenz,
+verstanden als Fähigkeit geschriebene Texte zu verstehen und zu nutzen,
+ist eine der Voraussetzungen für die Weiterentwicklung sowie Teilhabe
+an dem gesellschaftlichen Leben.
+Lesekompetenz ist ein universelles Werkzeug
+und Voraussetzung für Wissenserwerb
+in fast allen Bereichen.
+Bei den Erklärungansätzen wird immer wieder
+dem familiären Hintergrund der Jugendlichen
+grosse Bedeutung beigemessen.
+Bei der Operationalisierung des Merkmals des familiären Hintergrunds
+in der PISA-Studie wird zwischen Merkmalen der sozioökonomischen Stellung,
+des kulturellen und des sozialen Kapitals unterschieden (\cite{baumert_herkunftsbedingte_2006}).
+Eine der häufigsten Methoden zur Bestimmung der sozialen Herkunft von Schülerinnen und Schülern
+ist die Berücksichtigung der sozioökonomischen Stellung ihrer Familien.
+Der soziale Hintergrund lässt sich nicht ausreichend mit Hilfe einer Variable beschreiben,
+auch wenn diese als sehr aussagekräftig gilt.
+Neben der sozioökonomischen Stellung werden auch andere Aspekte der sozialen Herkunft untersucht.
+Das kulturelle und soziale Kapital der Familien,
+aus denen die Schülerinnen und Schüler kommen,
+erweitert und differenziert die Analysen des soziales Hintergrundes der Jugendlichen.
 
-\begin{figure}[htb] % Wo das Bild gesetzt wird, entscheidet LaTeX nach Typographischen Aspekten. Wenn ein Bild gesetzt werden soll, bevor ein neues Kapitel anfängt, muss nach dem alten Kapitel der Befehl \clearpage eingesetzt werden. Dann werden alle Float-Umgebungen, die noch "in der Luft hängen", gesetzt.
-\centering
-\includegraphics[width=0.8\textwidth]{images/Beispiel.png} % 0.8/textwidth setzt das Bild in 0,8-facher Textbreite. Der Faktor kann variiert oder weggelassen werden. Es gibt auch \textheight! Beachte bei Karten mit Maßstab, dass dieser beim Skalieren verändert wird!
-\caption[Bildunterschrift für das Abb.Verz.]{Bildunterschrift \citep[aus:][]{nachname_2005}}
-\label{fig:Beispiel.png} % Gibt man im Text \ref{fig:Beispiel.png} an, wir dort automatisch die Nummer des Bildes gesetzt.
-\end{figure}
-
-\subsection{Unterkapitel 2}
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
-
-<<cache=FALSE, echo=FALSE>>=
-read_chunk('pisa.R')
-@
-
-<<pisa, echo=FALSE>>=
-@
-
-<<results="asis", echo=FALSE, message=FALSE>>=
-library(Hmisc)
-tabelle1<-rbind(tabelle1_1, tabelle1_2)
-latex(
-  tabelle1,
-  file="",
-  col.just = strsplit("cccc", "")[[1]],
-  rowlabel="",
-  rowlabel.just="r", 
-  rgroup = c("Migrationshintergrund", "Sprachgebrauch zu Hause"),
-  n.rgroup=c(3, 2), 
-  booktabs = TRUE,
-  rowname = latexTranslate(rownames(tabelle1)),
-  caption="Häufigkeiten für Migrationshintergrund und Sprachgebrauch zuhause (N=3873)"
-)
-@
-
-<<results="asis", echo=FALSE, message=FALSE>>=
-library(Hmisc)
-latex(
-  tabelle2,
-  file="",
-  col.just = strsplit("cccc", "")[[1]],
-  rowlabel="",
-  rowlabel.just="r", 
-  cgroup=c("absolute Häufigkeiten", "prozentual"),
-  n.cgroup=c(2, 2),
-  booktabs = TRUE,
-  rowname = latexTranslate(rownames(tabelle2)),
-  caption="Sprachgebrauch zuhause nach Migrationshintergrund"
-)
-@
-
-<<results="asis", echo=FALSE, message=FALSE>>=
-library(Hmisc)
-latex(
-  tabelle3,
-  file="",
-  col.just = strsplit("cccccccc", "")[[1]],
-  rowlabel="",
-  rowlabel.just="r", 
-  rgroup = c("HISCED", "Bücher zuhause"),
-  n.rgroup=c(5, 6), 
-  cgroup=c("Häufigkeiten", "Lage und Streuungmasse"),
-  n.cgroup=c(2, 6),
-  booktabs = TRUE,
-  rowname = latexTranslate(rownames(tabelle3)),
-  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause",
-  insert.bottom="\\footnotesize{Anmerkung: Mo – Modus, Md – Median
-
-Zuordnung der ISCED Kategorien: 1. ISCED1,2=max.Haupt o. Realschule ohne Berufsausbildung / 2. ISCED 3B,C=Hauptschule und Lehre /3. SCED 3A, 4=Realschule und Fachschule /I4. SCED 5B=Abitur ohne Hochschule / 5.ISCED 5A, 6=min. Hochschulabschluss }"
-)
-@
-
-<<results="asis", echo=FALSE, message=FALSE>>=
-library(Hmisc)
-latex(
-  tabelle4,
-  file="",
-  col.just = strsplit("ccccccccc", "")[[1]],
-  rowlabel="",
-  rowlabel.just="r", 
-  booktabs = TRUE,
-  rowname = latexTranslate(rownames(tabelle4)),
-  caption="Leseleistung nach Migrationshintergrund (MHG)"
-)
-@
-
-<<results="asis", echo=FALSE, message=FALSE>>=
-library(stargazer)
-stargazer(model1, model2, model3, model4,
-  title="Results",
-  summary = FALSE,
-  no.space=TRUE,
-  digits=2,
-  dep.var.labels.include=FALSE,
-  keep.stat=c("rsq"),
-  notes.label="Anmerkung",
-  single.row=TRUE
-)
-@
-
-<<echo=FALSE, fig.cap="Test test", fig.height=6, out.width='\\textwidth'>>=
-boxplot(pisa.nm$lesen~pisa.nm$mig, col=c("royalblue2", "palevioletred1", "sienna"))
-abline(h=200, col="grey", lty=3)
-abline(h=250, col="grey", lty=3)
-abline(h=300, col="grey", lty=3)
-abline(h=350, col="grey", lty=3)
-abline(h=400, col="grey", lty=3)
-abline(h=450, col="grey", lty=3)
-abline(h=500, col="grey", lty=3)
-abline(h=550, col="grey", lty=3)
-abline(h=600, col="grey", lty=3)
-abline(h=650, col="grey", lty=3)
-abline(h=700, col="grey", lty=3)
-@
-
-\subsubsection{Unterunterkapitel}
+In der vorliegenden Arbeit soll der Einfluss des Migrationshintergrundes
+auf die Lesekompetenz der Jugendlichen anhand von Daten der Pisa-Studie 2009 analysiert werden.
+In wie weit sind die Unterschiede in den Lesekompetenzen
+der Fünfzehnjährigen in Deutschland auf deren nationale Herkunft zurückzuführen?
+Desweiteren soll der Frage nachgegangen werden
+in wieweit die ausgewählten Indikatoren des kulturellen Kapitals diesen Effekt verändern?
+Hierzu werden folgende Hypothesen aufgestellt:
+\begin{enumerate}
+	\item Die Lesekompetenz der Jugendlichen in Deutschland mit Migrationshintergrund
+	liegt unter dem von Jugendlichen ohne Migrationshintergrund,
+	auch unter der Berücksichtigung des Zeitpunktes der familiären Migration (erste und zweite Generation).
+	\item Die Berücksichtigung der ausgewählten Indikatoren des kulturellen Kapitals
+	reduziert den Einfuss des Migrationshintergrundes auf die Lesekompetenzen
+	der Jugendlichen aus zugewanderten Familien.
+\end{enumerate}

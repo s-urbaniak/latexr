@@ -1,0 +1,193 @@
+\section{Methode}
+\subsection{PISA - Studie, Stichprobe und Fallzahl}
+
+Die Datengrundlage für die vorliegende Arbeit bildet die PISA-Studie
+\textit{2009 Programme for International Student Assessment (PISA)}.
+Dies ist ein Untersuchungsprogramm der OECD-Midgliedsstaaten
+und wurde im Jahr 2000 zum erstem Mal durchgeführt (\cite{hertel_pisa_2014}; \cite{klieme_pisa_2010}).
+Ziel der Studie ist es die grundlegenden Kompetenzen
+(Lesekompetenz, die mathematische und die naturwissenschaftliche Kompetenzen)
+der Schülerinnen und Schüler gegen Ende ihrer Pflichtschulzeit zu untersuchen.
+Die PISA-Studie wird alle drei Jahre durchgeführt
+und es werden jeweils alle drei Kompetenzbereiche getestet.
+2009 bildete die Lesekompetenz erneut den inhaltlichen Schwerpunkt
+der Erhebung (das erste mal in 2000).
+In der Studie werden neben den Kompetenztests auch Fragebögen
+zur Erfassung von Kontextmerkmalen eingesetzt,
+in denen Schülerinnen und Schüler, Eltern, Schulen und Lehrpersonen
+Fragen zu den Bedingungen der Kompetenzentwicklung der Betroffenen beantworten.
+An der PISA- Studie 2009 haben 65 Staaten teilgenommen
+und es wurden 470.000 Schüler/innen getestet.
+In Deutschland wurden in 226 Schulen je 25 Schüler/innen getestet.
+Die Stichprobe beinhaltet Daten von 4979 Schüler/innen.
+Die Befragten waren im Durchschnitt fünfzehn Jahre alt.
+Folgende Analysen beziehen nur diejenigen Schülerinnen und Schüler ein,
+für die vollständige Angaben für alle für diese Arbeit relevante Variablen vorlagen.
+Insgesamt umfasst die reduzierte Stichprobe N=3873 Schülerinnen und Schüler.
+
+\subsection{Operationalisierung}
+Die Auswahl der Prädiktoren,
+die einen Einfluss kulturellen Kapitals auf Lesekompetenz haben können,
+wurde durch das Model des Zusammenhangs zwischen Merkmale
+des familiären Hintergrundes und schulischem Erfolg
+von Baumert, Watermann und Schümer (2003) inspiriert.
+Dabei werden die Struktur- und Prozessmerkmale familiärer Herkunft unterschieden.
+Untersucht wird der Einfluss des Migrationshintergrundes
+(migrationsspezifisches Strukturmarkmal) auf die Lesekompetenz.
+Besteht dieser noch bei der Berücksichtigung weiterer beschriebener Merkmale
+des kulturellen Kapitals?
+Sprachgebrauch zuhause,
+als migrationsspezifisches Prozessmerkmal,
+kann auf die Orientierung der Familie an der Aufenthaltskultur hinweisen.
+Eltern, die selbst das Bildungserfarung haben
+(Bildungsniveau der Eltern - allgemeines soziokulturelles Strukturmerkmal)
+und selbst einen Bildungsweg erfolgreich durchlaufen haben,
+sind bereiter und fähiger ihre Kinder auf ihren Bildungswegen zu unterstützen.
+Die Anzahl der vorhandenen Bücher zuhause
+(allgemeines soziokulturelles Prozessmerkmal)
+zeigt die Bereitschaft aber auch ökonomische Möglichkeiten
+in kulturelle Ressourcen zu investieren.
+Diese Variable kann gleichzeitig als Indikator
+des sozioökonomischen Status gedeutet werden (\cite{baumert_schulischer_2006}).
+
+\subsubsection*{Lesekompetenz – abhängige Variable}
+
+Die zentrale Variable in den folgenden Analysen ist die Lesekompetenz
+als Indikator für das erreichte Kompetenzniveau.
+Die Lesekompetenz wird in der PISA verstanden als
+"die Fähigkeit einer Person,
+geschriebene Texte zu verstehen,
+zu nutzen und über sie zu reflektieren,
+um eigene Ziele zu erreichen,
+das eigene Wissen und Potenzial weiterzuentwickeln
+und am gesellschaftlichen Leben teilzunehmen" (\cite{klieme_pisa_2010}, S.13).
+Diese wird in dem Lesekompetenztest ermittelt
+und auf einer Gesamtskala in Form von Punktenscore angegeben.
+
+\subsubsection*{Unabhängige Variablen:}
+
+\subsubsection*{Migrationsstatus}
+
+Der für diese Arbeit zur Verfügung stehende Datensatz
+beinhaltet eine Variable zum Migrationshintergrund der Befragten.
+Diese wurde aus den Angaben der Schüler zum Geburtsland der Eltern
+und des Kindes sowie zum Einwanderungsalter des Kindes abgeleitet (\cite{hertel_pisa_2014}).
+Die Schüler/innen haben die Frage beantwortet:
+"In welchem Land wurdest du geboren?
+In welchem Land wurden deine Eltern geboren?"
+Sie konnten die Geburtsländer aus der Liste mehrerer Staaten auswählen.
+Zusätzlich gab es die Option,
+einen weiteren Staat frei zu benennen:
+"In einem anderen Land und zwar...".
+In einer weiteren Frage wurden diejenigen,
+die nicht in Deutschland geboren worden sind,
+nach deren Einwanderungsalter gefragt:
+"Wenn du NICHT in Deutschland geboren bist,
+wie alt warst du,
+als du nach Deutschland gekommen bist?"
+Aus diesen Angaben wurde die Variable Migrationstatus generiert,
+die drei Ausprägungen hat:
+
+\begin{enumerate}
+	\item ohne Migrationshintergrund (kein Elternteil im Ausland geboren)
+	\item zweite Generation (beide Elternteile im Ausland geboren, Jugendlicher in Deutschland geboren)
+	\item erste Generation (beide Elternteile und Jugendlicher im Ausland geboren)
+\end{enumerate}
+
+\subsubsection*{\textit{Anmerkung}}
+
+In Bezug auf die Zuordnung von Schülerinnen und Schülern
+mit nur einem im Ausland geborenen Elternteil gibt es keine klare Vorgehensweise.
+In der wissenschaftlichen Literatur werden diese häufig separat ausgewiesen,
+da es Befunde gibt,
+die nahe legen,
+dass die vollständige schulische Integration der Jugendlichen
+mit nur einem im Ausland geborenen Elternteil grundsätzlich gegeben ist" (\cite{klieme_pisa_2010} S. 204).
+Je nach Herkunftsland des im Ausland geborenen Elternteils
+sind auch für diese Jugendlichen teilweise erhebliche Kompetenznachteile zu beobachten.
+Sie der Gruppe der Schülerinnen und Schüler ohne Migrationshintergrund zuzuordnen,
+hätte eine Unterschätzung der Disparitäten
+auch für die erste und zweite Generation zur Folge (\cite{klieme_pisa_2010} S.204).
+Die OECD ordnet jedoch diese Jugendliche den Schülerinnen und Schülern
+ohne Migrationshintergrund zu,
+was auch auf Grund des verfügbares Datensatzes für diese Arbeit gilt.
+
+\subsubsection*{Sprachgebrauch zuhause}
+
+In dem Fragebogen für Schülerinnen und Schüler würden diese danach gefragt,
+welche Sprache sie zuhause am häufigsten sprechen.
+Die Schülerinnen und Schüler konnten wieder aus einer Liste der Staaten auswählen.
+Zusätzlich gab es die Option,
+eine weitere Sprache frei zu benennen:
+"Eine andere Sprache und zwar...".
+Diese Angaben wurden in eine dichotome Variable überführt: 
+
+\begin{enumerate}
+	\item Deutsch
+	\item andere Sprache
+\end{enumerate}
+
+Personen,
+deren Muttersprache nicht Deutsch war
+und bis zu dem Zeitpunkt der Testung
+weniger als ein Jahr in der Testsprache unterrichtet wurden,
+haben an der Studie nicht teilgenommen.
+
+\subsubsection*{Bildungsniveau der Eltern - Höchster ISCED in Familie}
+
+Das Bildungsniveau der Eltern wird auf der Grundlage der Angaben
+der Schülerinnen und Schüler zu den Bildungsabschlüssen ihrer Eltern konstruiert.
+Für jeden Schüler wurde der höchste Abschluss der Eltern ausgewählt
+und einer der folgenden Kategorien zugeordnet:
+Der Bildungsabschluss wurde zunächst nach der
+\textit{International Standard Classification of Education (ISCED)}
+klassifiziert (OECD, 1999).
+Anhand dieser Kategorien und der Anzahl der Bildungsjahre wurde der Index
+des höchsten Bildungsabschlusses der Eltern (HISCED) konzipiert,
+entspricht der ISCED-Stufe des Elternteils mit dem jeweils höheren Bildungsabschluss (\cite{oecd_pisa_2014}, 2014).
+Die im Datensatz vorhandene Variable hat 6 Ausprägungen.
+Diese werden, um die Interpretation zu vereinfachen,
+in der vorliegenden Arbeit den deutschen Bildungsabschlüssen
+nach ISCED 1997
+(Zuordnung deutscher Bildungsabschlüsse zur ISCED 1997,
+Stand: Schuljahr 2008/2009 Quelle: Statistisches Bundesamt)
+zugeordnet.
+Auf Grund der geringeren Fallzahl (3) in der Kategorie ISCED 1
+wurde diese mit der Kategorie ISCED 2 zusammengefasst.
+Daraus ergeben sich für die Variable
+"Bildungsniveau der Eltern"
+folgende 5 Ausprägungen: 
+
+\begin{enumerate}
+	\item (ISCED 2, 1): max.Haupt oder Realschule ohne Berufsausbildung
+	\item (ISCED 3B,C):  Hauptschule und Lehre
+	\item (ISCED 3A, 4): Realschule und Fachschule
+	\item (ISCED 5B): Abitur ohne Hochschule
+	\item (ISCED 5A , 6): mind. Hochschulabschluss
+\end{enumerate}
+
+\subsubsection*{Anzahl der Bücher zuhause}
+\cite{hertel_pisa_2014} Die Frage für die Schülerinnen und Schüler lautete:
+"Wie viele Bücher gibt es bei dir zuhause?".
+Sie wurden aufgefordert auf einer sechsstufigen Ratingskala
+die endsprechende Antwort auszuwählen:
+0–10, 11–25, 26–100, 101–200, 201–500 und mehr als 500 Bücher.
+
+\subsection{Statistische Verfahren}
+
+Alle statistische Verfahren würden mit Hilfe der Software R 3.2.1 (\cite{R}) durchgeführt.
+Zunächst werden deskriptiv die Variablen beschrieben.
+Postulierte Hypothesen werden mit Hilfe von folgenden Statistischen Verfahren überprüft.
+Einfache und multivariate lineare Regression,
+Test auf Normalverteilung (Kolmogorow-Smirnow-Lilliefors-Test)
+und einfaktorielle Varianzanalyse (ANOVA).
+In einer Sequenz von multiplen Regresionsanalysen
+wird schrittweise der Einfluss von weiteren Prädiktoren überprüft.
+Die Berechnung der Regresionsmodelle und der Vergleich der Regressionsgewichte
+diente der Abklärung ob und in welchen Masse der Migrationshintergrund Einfluss
+auf die vorhergesagte Leseleistung der Jugendlichen nimmt bei Kontrolle der weiteren Prädiktoren.
+Desweiteren soll die Frage beantwortet werden,
+ob weitere Variablen einen Beitrag zur Erklärung der Varianz in der Lesekompetenz leisten.
+Ausführlich berichtet werden Ergebnisse der Modelle 1 und 4.
+Die Interpretation der berichteten Effekte orientiert sich
+an von Cohen genannten Schwellenwerten (\cite{cohen_statistical_1988}).

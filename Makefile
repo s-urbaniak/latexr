@@ -23,6 +23,7 @@ ROUTFILES = $(RFILES:.R=.Rout)
 RDATAFILES= $(RFILES:.R=.Rdata)
 MAINTEX = $(MAINFILE:=.tex)
 MAINPDF = $(MAINFILE:=.pdf)
+MAINBBL = $(MAINFILE:=.bbl)
 ALLTEX = $(MAINTEX) $(RNWTEX) $(TEXFILES)
 
 # Dependencies
@@ -61,7 +62,8 @@ clean:
 	-rm -f $(MAINTEX) $(RNWTEX)
 	-rm -rf $(FIGUREDIR)
 	-rm $(MAINPDF)
-	
+	-rm $(MAINBBL)
+
 clearcache:
 	-rm -rf cache
   

@@ -1,0 +1,266 @@
+\section{Ergebnisse}
+
+\subsection{Deskriptive Befunde}
+
+Zunächst soll ein Gesamteindruck über die in die Analysen eingehenden Variablen gewonnen werden.
+Tabelle \ref{tabelle1} zeigt die Häufigkeitsverteilung der nominalen Variablen
+Migrationshintergrund und Sprachgebrauch zuhause.
+Die Mehrheit der getesteten Jugendlichen (fast 88\%)
+hat keinen Migrationshintergrund.
+In der untersuchten Stichprobe sind insgesamt 466 (ca. 12\%)
+Schülerinnen und Schüler selbst oder deren Eltern nicht in Deutschland geboren.
+Die Mehrheit der Jugendlichen spricht zuhause deutsch.
+326 (8\%) der Befragten benutzt in ihren Familienhäusern eine andere Sprache.
+Der Anteil der Jugendlichen, die eine andere Sprache zuhause spricht,
+ist kleiner als die Anteil derjenigen, die Migrationshintergrund haben.
+Bei der Betrachtung des Sprachgebrauchs zuhause nach Migrationshintergrund (Tabelle \ref{tabelle2}) fällt auf,
+dass es eine Gruppe von Jugendlichen gibt,
+die keinen Migrationshintergrund haben
+und trotzdem zuhause eine andere Sprache als Deutsch benutzen (1,47\%).
+Dies lässt sich teilweise damit erklären,
+dass in dem Datensatz Jugendliche mit nur einem im Ausland geborenen Elternteil
+zu den Jugendlichen ohne Migrationshintergrund gerechnet werden.
+In der Gruppe der Jugendlichen, deren Eltern zugewandert sind,
+sie selbst aber in Deutschland geboren sind,
+sprechen fast gleich soviel Deutsch zuhause wie eine andere Sprache – fast 4\%.
+Unter den Jugendlichen, deren Geburtsland nicht Deutschland ist,
+sprechen die meisten eine andere Sprache als Deutsch.
+
+<<cache=FALSE, echo=FALSE>>=
+read_chunk('pisa.R')
+@
+
+<<pisa, echo=FALSE>>=
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+tabelle1<-rbind(tabelle1_1, tabelle1_2)
+latex(
+  tabelle1,
+  file="",
+  col.just = strsplit("cccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  rgroup = c("Migrationshintergrund", "Sprachgebrauch zu Hause"),
+  n.rgroup=c(3, 2), 
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle1)),
+  caption="Häufigkeiten für Migrationshintergrund und Sprachgebrauch zuhause (N=3873)",
+  label="tabelle1"
+)
+@
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+latex(
+  tabelle2,
+  file="",
+  col.just = strsplit("cccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  cgroup=c("absolute Häufigkeiten", "prozentual"),
+  n.cgroup=c(2, 2),
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle2)),
+  caption="Sprachgebrauch zuhause nach Migrationshintergrund",
+  label="tabelle2"
+)
+@
+
+Tabelle \ref{tabelle3} zeigt die Verteilung
+der unabhängigen Variablen höchster ISCED
+in der Familie und Anzahl der Bücher zuhause.
+Die Jugendlichen stammen am häufigsten aus Familien,
+in denen zumindest ein Elternteil (29\%) Hochschulabschluss hat,
+gefolgt von denjenigen, die Real- oder Fachschule besucht haben (23\%).
+50\% der Schülerinnen und Schüler stammen aus Elternhäusern
+mit dem maximal Real- oder Fachschulabschluss
+oder weniger und in 50\% der Familien
+sind als höchst erreichte Abschlüsse zwischen Real- oder Fachschulabschluss
+und Hochschulabschluss repräsentiert.
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+latex(
+  tabelle3,
+  file="",
+  col.just = strsplit("cccccccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  rgroup = c("HISCED", "Bücher zuhause"),
+  n.rgroup=c(5, 6), 
+  cgroup=c("Häufigkeiten", "Lage und Streuungmasse"),
+  n.cgroup=c(2, 6),
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle3)),
+  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause",
+  insert.bottom="\\footnotesize{Anmerkung: Mo – Modus, Md – Median
+
+Zuordnung der ISCED Kategorien: 1. ISCED1,2=max.Haupt o. Realschule ohne Berufsausbildung / 2. ISCED 3B,C=Hauptschule und Lehre /3. SCED 3A, 4=Realschule und Fachschule /I4. SCED 5B=Abitur ohne Hochschule / 5.ISCED 5A, 6=min. Hochschulabschluss }",
+  label="tabelle3"
+)
+@
+
+Die Hälfte der Jugendlichen hat zuhause zwischen 26 und 500 Bücher.
+25\% der Fünfzehnjährigen verfügt im Haushalt
+über 0 bis 25 Druckwerke und die restlichen 25\% hat 500 Bücher und mehr.
+Die Jugendlichen geben am häufigsten an, zwischen 26 und 100 Bücher zuhause zu haben. 
+
+\subsection{Lesekompetenz und Migrationshintergrund – gibt es Unterschiede zwischen den Gruppen?}
+
+Den ersten Eindruck über die Unterschiede in den Lesekompetenz
+in Abhängigkeit von Migrationshintergrund
+vermittelt die Tabelle \ref{tabelle4} und Abbildung \ref{fig:abbildung1},
+die in einem Bloxplot die Verteilung der Lesekompetenz
+innerhalb der Gruppen
+sowie die Unterschiede
+zwischen den Gruppen veranschaulicht (Abbildung \ref{fig:abbildung1}).
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(Hmisc)
+latex(
+  tabelle4,
+  file="",
+  col.just = strsplit("ccccccccc", "")[[1]],
+  rowlabel="",
+  rowlabel.just="r", 
+  booktabs = TRUE,
+  rowname = latexTranslate(rownames(tabelle4)),
+  caption="Leseleistung nach Migrationshintergrund (MHG)",
+  label="tabelle4"
+)
+@
+
+<<abbildung1, echo=FALSE, fig.cap="Lesekompetenz in Abhängigkeit vom Migrationshintergrund", fig.height=5, out.width='\\textwidth'>>=
+boxplot(pisa.nm$lesen~pisa.nm$mig, col=c("snow3", "snow2", "snow1"))
+abline(h=200, col="grey", lty=3)
+abline(h=250, col="grey", lty=3)
+abline(h=300, col="grey", lty=3)
+abline(h=350, col="grey", lty=3)
+abline(h=400, col="grey", lty=3)
+abline(h=450, col="grey", lty=3)
+abline(h=500, col="grey", lty=3)
+abline(h=550, col="grey", lty=3)
+abline(h=600, col="grey", lty=3)
+abline(h=650, col="grey", lty=3)
+abline(h=700, col="grey", lty=3)
+@
+
+Schon der erste Blick auf die Abbildung \ref{fig:abbildung1} lässt erkennen,
+dass die Verteilung der Leseleistung Werte
+für die Gruppe der Schülerinnen und Schüler ohne Migrationshintergrund 
+und deren nicht deutscher Herkunft sich voreinander unterscheiden.
+Der Median für die Gruppe ohne Migrationshintergrund liegt höher,
+der Wertebereich ist grösser als in den beiden Gruppen mit Migrationshintergrund,
+die sich in der Länge und Lage ihres Interquartilsbereiche nicht sichtbar voneinander unterscheiden.
+Auch die mittlere Leistung der Schüler ohne Migrationshintergrund liegt höher (516.1 Punkte).
+Für die beiden Gruppen der Jugendlichen mit Migrationshintergrund
+liegt die mittlere Leistung endsprechend 44 für die zweite Generation
+und 54 Punkte für die erste Generation niedriger.
+Die erste und die zweite Generation unterschieden sich nicht sichtbar.
+
+Der Test auf die Normalverteilung (Kolmoogorov-Smimov-Test mit Lilliefors-Korrektur)
+ergab für die Gruppe der Jugendlichen ohne Migrationshintergrund
+keine Normalverteilung der Lesekompetenz.
+Für die beiden Gruppen mit Migrationshintergrund war der Test nicht signifikant
+(sie sind Normalverteilt).
+Die einfaktorielle Varianzanalyse (ANOVA) hat bestätigt,
+dass sich mindestens zwei von den Gruppen signifikant voreinander unterscheiden.
+
+\subsection{Einfluss des Migrationshintergrundes auf die Leseleistung der Jugendlichen – einfache lineare Regression.}
+
+<<results="asis", echo=FALSE, message=FALSE>>=
+library(stargazer)
+stargazer(model1, model2, model3, model4,
+  title="Results",
+  summary = FALSE,
+  no.space=TRUE,
+  digits=2,
+  dep.var.labels.include=FALSE,
+  keep.stat=c("rsq"),
+  notes.label="Anmerkung",
+  single.row=TRUE,
+  label="tabelle5"
+)
+@
+
+Der Achsenabschnitt bei Model 1 (Tabelle \ref{tabelle5}) liegt bei 516.12.
+Die geschätzte Leseleistung eines Schülers ohne Migrationshintergrund beträgt 516.12 Punkte.
+Die standardisierte vorhergesagte Leseleistung liegt 0,06 Standabweichungen
+über dem Gesamtmittelwert der Leseleistung.
+Das ist ein Effekt unterhalb der Schwellenwerte nach Cohen (\cite{cohen_statistical_1988})
+und ist kein praktisch bedeutsamer Effekt.
+Für einen/e Schüller/in mit Migrationshintergrund in der zweiten Generation
+singt die vorhergesagte Leseleistung um 44.94 Punkte
+und beträgt 471.06.
+Die mittlere vorhergesagte Leseleistung eines Jugendlichen
+mit Migrationshintergrund in zweiter Generation
+liegt 0.51 Standardabweichungen unterhalb der mittleren Leistung
+eines Schülers ohne Migrationshintergrund (Referenzkategorie).
+Das ist ein mittlerer hoch signifikanter Effekt nach Cohen.
+Für einen Schüler der selbst zugewandert ist (erste Generation Migrationshintergrund)
+beträgt der Effekt -0.62 (ebenfalls mittlerer Effekt nach Cohen),
+was bedeutet, dass die Leseleistung eines Jugendlichen dieser Gruppe
+0.62 Standardabweichungen unterhalb des mittleren Wertes
+des Schülers ohne Migrationshintergrund liegt.
+Die vorhergesagte Leseleistung der Jugendlichen dieser Gruppe
+ist um 54.13 Punkte niedriger als die eines Schülers ohne Migrationshintergrund
+und liegt bei 461.99 Punkten.
+Der Determinationskoeffizient $R^2$ beträgt 0.032.
+Somit konnte 3.2\% der Gesamtvarianz in der Leseleistung
+durch den Migrationshintergrund erklärt werden.
+Das ist ein kleiner aber signifikanter Effekt (Schwellenwerte für $R^2$ nach Cohen).
+
+\subsection{Einfluss des Migrationshintergrundes auf die Leseleistung der Jugendlichen bei der Kontrolle ausgewählter Merkmale der Familie (kulturelles Kapital)}
+
+Unter der Hinzunahme in die Regressionsanalyse von weiteren Variablen
+verändert sich der Einfluss des Migrationshintergrundes
+auf die Leseleitung der Jugendlichen bedeutsam.
+Der Intercept liegt bei 390.16 Punkten.
+Damit liegt die durchschnittliche Leseleistung in der Refferenzgruppe
+1.37 Standardabweichungen unterhalb des Gesamtmittelwertes
+(ein grosser Effekt nach Cohen).
+Der Effekt des Migrationshintergrundes ist nicht mehr signifikant
+und reduziert sich auf - 0.07 Standardabweichungen
+für einen Jugendlichen mit Migrationshintergrund in der zweiten Generation
+und - 0.15 Standardabweichungen
+für die erste Generation bei der Kontrolle der anderen Variablen.
+Interessanterweise bleibt der Einfluss des Sprachgebrauchs
+nach der Kontrolle des Bildungsniveau der Eltern
+und der vorhandenen Bücher mit kleinem Effekt bestehen (– 0.25 Standardabweichungen).
+Alle Effekte dieses Models (bis auf oben beschriebenen Migrationshintergrund)
+sind hoch signifikant.
+Der Determinationskoeffizient $R^2$ beträgt 0.286.
+Migrationshintergrund, Sprachgebrauch zuhause, Bildungsniveau der Eltern
+und Anzahl der Bücher zuhause erklären zusammen 28.6\% der Gesamtvarianz
+der Leseleistung (ein grosser Effekt nach Cohen).
+Die erklärte Varianz in der sequentiellen Analyse (Model 2-4)
+erhöht sich mit der Zunahme der Familiensprache um 0.6\%.
+Grössere Erklärungskraft hat das Bildungsniveau der Eltern -
+Anstieg der aufgeklärten Varianz um weitere 11.1\%.
+Die Anzahl der zuhause vorhanden Bücher trägt mit zusätzlichen 13.7\%
+am meisten zur Aufklärung der Gesamtvarianz der Leseleistungen bei. 
+
+\subsubsection*{Diskussion}
+
+Betrachtet man die Leseleistung in Abhängigkeit vom Migrationshintergrund,
+wirkt sich dieser signifikant negativ auf die von den Jugendlichen erreichte Punktezahl aus.
+Der Effekt wurde in der Regressionsanalyse (Model 1) bestätigt.
+Die Kompetenznachteile von fast 45 Punkten für die erste Generation
+und 54 Punkte für die zweite Generation der Fünfzehnjährigen
+mit Migrationshintergrund gegenüber den der deutschen Herkunft
+bedeuten bis zu 2 Schuljahre Kompetenzunterschied (\cite{prenzel_pisa_2007}).
+In Modellen 2 bis 4 haben sich die Veränderungen in dem Einfluss
+des Migrationshintergrundes auf die Lesekompetenz ebenfalls beweisen lassen.
+Bildungsniveau der Eltern und Besitz von Büchern
+haben positiven Einfluss auf die Lesekompetenzen der Jugendlichen.
+Je mehr Kulturgegenstände in einer Familie verfügbar sind,
+je mehr Bücher und bildungsrelevante Ressourcen vorhanden sind,
+desto besser ist der erreichte Testwert.
+Im Gegensatz dazu zeigt sich das Benutzen als Familiensprache
+einer anderen Sprache als Deutsch negativ auf den Erwerb von Lesekompetenz der Jugendlichen.
+In der Arbeit konnte gezeigt werden,
+dass Migrationshintergrund unter der Kontrolle der Dritvariablen,
+die das kulturelle Kapital in der Familie repräsentieren
+keinen signifikanten Eifluss auf die Lesekompetenzen der Jugendlichen mehr hat.

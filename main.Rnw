@@ -167,34 +167,18 @@
 %% Für den Hauptteil normale Seitenzahlen
 \pagenumbering{arabic}  % Nummerierungstyp roman | arabic
 
-\section{Einleitung}
 <<chap1, child="1_Einleitung.Rnw">>=
 @ 
 
 \clearpage
 
-\section{Untersuchungsgebiet}
-\input{2_Untersuchungsgebiet.tex}
+<<chap1, child="2_methode.Rnw">>=
+@ 
 
 \clearpage
 
-\section{Methoden}
-\input{3_Methoden.tex}
-
-\clearpage
-
-\section{Ergebnisse}
-\input{4_Ergebnisse.tex}
-
-\clearpage
-
-\section{Diskussion}
-\input{5_Diskussion.tex}
-
-\clearpage
-
-\section{Zusammenfassung}
-\input{6_Fazit.tex}
+<<chap1, child="3_ergebnisse.Rnw">>=
+@ 
 
 \clearpage
 
@@ -205,7 +189,7 @@
 %%% Literatur-Verzeichnis 
 
 % damit wird die Datei literature.bib aus dem gleichen Verzeichnis benutzt. Zum Bearbeiten der Datei empfehle ich pybliographer oder Zotero!
-\bibliography{literature} 
+\bibliography{zotero} 
 
 % hier einen passenden Stil für die Darstellung der Zitate im Text und im Lit.-Verz. angeben!
 \bibliographystyle{munich} 
