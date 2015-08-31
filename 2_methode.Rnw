@@ -28,7 +28,7 @@ Insgesamt umfasst die reduzierte Stichprobe N=3873 Schülerinnen und Schüler.
 \subsection{Operationalisierung}
 Die Auswahl der Prädiktoren,
 die einen Einfluss kulturellen Kapitals auf Lesekompetenz haben können,
-wurde durch das Model des Zusammenhangs zwischen Merkmale
+wurde durch das Model des Zusammenhangs zwischen den Merkmalen
 des familiären Hintergrundes und schulischem Erfolg
 von Baumert, Watermann und Schümer (2003) inspiriert.
 Dabei werden die Struktur- und Prozessmerkmale familiärer Herkunft unterschieden.
@@ -55,12 +55,12 @@ des sozioökonomischen Status gedeutet werden (\cite{baumert_schulischer_2006}).
 Die zentrale Variable in den folgenden Analysen ist die Lesekompetenz
 als Indikator für das erreichte Kompetenzniveau.
 Die Lesekompetenz wird in der PISA verstanden als
-"die Fähigkeit einer Person,
+"`die Fähigkeit einer Person,
 geschriebene Texte zu verstehen,
 zu nutzen und über sie zu reflektieren,
 um eigene Ziele zu erreichen,
 das eigene Wissen und Potenzial weiterzuentwickeln
-und am gesellschaftlichen Leben teilzunehmen" (\cite{klieme_pisa_2010}, S.13).
+und am gesellschaftlichen Leben teilzunehmen"' (\cite{klieme_pisa_2010}, S.13).
 Diese wird in dem Lesekompetenztest ermittelt
 und auf einer Gesamtskala in Form von Punktenscore angegeben.
 
@@ -73,18 +73,18 @@ beinhaltet eine Variable zum Migrationshintergrund der Befragten.
 Diese wurde aus den Angaben der Schüler zum Geburtsland der Eltern
 und des Kindes sowie zum Einwanderungsalter des Kindes abgeleitet (\cite{hertel_pisa_2014}).
 Die Schüler/innen haben die Frage beantwortet:
-"In welchem Land wurdest du geboren?
-In welchem Land wurden deine Eltern geboren?"
+"`In welchem Land wurdest du geboren?
+In welchem Land wurden deine Eltern geboren?"'
 Sie konnten die Geburtsländer aus der Liste mehrerer Staaten auswählen.
 Zusätzlich gab es die Option,
 einen weiteren Staat frei zu benennen:
-"In einem anderen Land und zwar...".
+"`In einem anderen Land und zwar..."'.
 In einer weiteren Frage wurden diejenigen,
 die nicht in Deutschland geboren worden sind,
 nach deren Einwanderungsalter gefragt:
-"Wenn du NICHT in Deutschland geboren bist,
+"`Wenn du NICHT in Deutschland geboren bist,
 wie alt warst du,
-als du nach Deutschland gekommen bist?"
+als du nach Deutschland gekommen bist?"'.
 Aus diesen Angaben wurde die Variable Migrationstatus generiert,
 die drei Ausprägungen hat:
 
@@ -102,12 +102,12 @@ In der wissenschaftlichen Literatur werden diese häufig separat ausgewiesen,
 da es Befunde gibt,
 die nahe legen,
 dass die vollständige schulische Integration der Jugendlichen
-mit nur einem im Ausland geborenen Elternteil grundsätzlich gegeben ist" (\cite{klieme_pisa_2010} S. 204).
-Je nach Herkunftsland des im Ausland geborenen Elternteils
+mit nur einem im Ausland geborenen Elternteil grundsätzlich gegeben ist (\cite{klieme_pisa_2010}).
+"`Je nach Herkunftsland des im Ausland geborenen Elternteils
 sind auch für diese Jugendlichen teilweise erhebliche Kompetenznachteile zu beobachten.
 Sie der Gruppe der Schülerinnen und Schüler ohne Migrationshintergrund zuzuordnen,
 hätte eine Unterschätzung der Disparitäten
-auch für die erste und zweite Generation zur Folge (\cite{klieme_pisa_2010} S.204).
+auch für die erste und zweite Generation zur Folge"' (\cite{klieme_pisa_2010} S.204).
 Die OECD ordnet jedoch diese Jugendliche den Schülerinnen und Schülern
 ohne Migrationshintergrund zu,
 was auch auf Grund des verfügbares Datensatzes für diese Arbeit gilt.
@@ -119,7 +119,7 @@ welche Sprache sie zuhause am häufigsten sprechen.
 Die Schülerinnen und Schüler konnten wieder aus einer Liste der Staaten auswählen.
 Zusätzlich gab es die Option,
 eine weitere Sprache frei zu benennen:
-"Eine andere Sprache und zwar...".
+"`Eine andere Sprache und zwar..."'.
 Diese Angaben wurden in eine dichotome Variable überführt: 
 
 \begin{enumerate}
@@ -144,7 +144,7 @@ Der Bildungsabschluss wurde zunächst nach der
 klassifiziert (OECD, 1999).
 Anhand dieser Kategorien und der Anzahl der Bildungsjahre wurde der Index
 des höchsten Bildungsabschlusses der Eltern (HISCED) konzipiert,
-entspricht der ISCED-Stufe des Elternteils mit dem jeweils höheren Bildungsabschluss (\cite{oecd_pisa_2014}, 2014).
+entspricht der ISCED-Stufe des Elternteils mit dem jeweils höheren Bildungsabschluss (\cite{oecd_pisa_2014}).
 Die im Datensatz vorhandene Variable hat 6 Ausprägungen.
 Diese werden, um die Interpretation zu vereinfachen,
 in der vorliegenden Arbeit den deutschen Bildungsabschlüssen
@@ -155,7 +155,7 @@ zugeordnet.
 Auf Grund der geringeren Fallzahl (3) in der Kategorie ISCED 1
 wurde diese mit der Kategorie ISCED 2 zusammengefasst.
 Daraus ergeben sich für die Variable
-"Bildungsniveau der Eltern"
+"`Bildungsniveau der Eltern"'
 folgende 5 Ausprägungen: 
 
 \begin{enumerate}
@@ -168,7 +168,7 @@ folgende 5 Ausprägungen:
 
 \subsubsection*{Anzahl der Bücher zuhause}
 \cite{hertel_pisa_2014} Die Frage für die Schülerinnen und Schüler lautete:
-"Wie viele Bücher gibt es bei dir zuhause?".
+"`Wie viele Bücher gibt es bei dir zuhause?"'.
 Sie wurden aufgefordert auf einer sechsstufigen Ratingskala
 die endsprechende Antwort auszuwählen:
 0–10, 11–25, 26–100, 101–200, 201–500 und mehr als 500 Bücher.
@@ -181,7 +181,7 @@ Postulierte Hypothesen werden mit Hilfe von folgenden Statistischen Verfahren ü
 Einfache und multivariate lineare Regression,
 Test auf Normalverteilung (Kolmogorow-Smirnow-Lilliefors-Test)
 und einfaktorielle Varianzanalyse (ANOVA).
-In einer Sequenz von multiplen Regresionsanalysen
+In einer Sequenz von Regresionsanalysen
 wird schrittweise der Einfluss von weiteren Prädiktoren überprüft.
 Die Berechnung der Regresionsmodelle und der Vergleich der Regressionsgewichte
 diente der Abklärung ob und in welchen Masse der Migrationshintergrund Einfluss

@@ -27,6 +27,11 @@
 % Support for PDF inclusion
 \usepackage[final]{pdfpages}
 
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{1}
+\SetWatermarkLightness{0.9}
+
 \usepackage{setspace}		% Paket für halben Zeilenabstand
 %\doublespacing			% doppelter Zeilenabstand
 \onehalfspacing			% Zeilenabstand 1,5

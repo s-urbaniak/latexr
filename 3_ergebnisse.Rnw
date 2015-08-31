@@ -111,11 +111,7 @@ Die Jugendlichen geben am häufigsten an, zwischen 26 und 100 Bücher zuhause zu
 
 Den ersten Eindruck über die Unterschiede in den Lesekompetenz
 in Abhängigkeit von Migrationshintergrund
-vermittelt die Tabelle \ref{tabelle4} und Abbildung \ref{fig:abbildung1},
-die in einem Bloxplot die Verteilung der Lesekompetenz
-innerhalb der Gruppen
-sowie die Unterschiede
-zwischen den Gruppen veranschaulicht (Abbildung \ref{fig:abbildung1}).
+vermittelt die Tabelle \ref{tabelle4} und Abbildung \ref{fig:abbildung1}.
 
 <<results="asis", echo=FALSE, message=FALSE>>=
 library(Hmisc)
@@ -238,8 +234,8 @@ am meisten zur Aufklärung der Gesamtvarianz der Leseleistungen bei.
 Betrachtet man die Leseleistung in Abhängigkeit vom Migrationshintergrund,
 wirkt sich dieser signifikant negativ auf die von den Jugendlichen erreichte Punktezahl aus.
 Der Effekt wurde in der Regressionsanalyse (Model 1) bestätigt.
-Die Kompetenznachteile von fast 45 Punkten für die erste Generation
-und 54 Punkte für die zweite Generation der Fünfzehnjährigen
+Die Kompetenznachteile von fast 45 Punkten in der ersten Generation
+und 54 Punkte in der zweiten Generation der Fünfzehnjährigen
 mit Migrationshintergrund gegenüber den der deutschen Herkunft
 bedeuten bis zu 2 Schuljahre Kompetenzunterschied (\cite{prenzel_pisa_2007}).
 In Modellen 2 bis 4 haben sich die Veränderungen in dem Einfluss
