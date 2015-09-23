@@ -1,4 +1,4 @@
-% Aus der Datei preambel.tex werden alle globalen Einstellungen für das Dokument geladen:
+
 \documentclass[a4paper,11pt,ngerman,DIV=12,BCOR=12mm,titlepage,toc=listof,toc=bib]{scrartcl}
 
 \usepackage{cmap} % to make the PDF files "searchable and copyable" in pdf viewer
@@ -26,6 +26,7 @@
 
 % Support for PDF inclusion
 \usepackage[final]{pdfpages}
+\usepackage{rotating}
 
 \usepackage{draftwatermark}
 \SetWatermarkText{DRAFT}
@@ -54,9 +55,6 @@
            {ü}{{\"u}}1
            {ß}{{ss}}1
 }
-
-\renewcommand*\lstlistlistingname{Script-Verzeichnis} % Umbenennen des Listing-Verz. in Script-Verz.
-\renewcommand*\lstlistingname{Script} % Umbenennen des Listings in Script
 
 %%% Hyperref-Paket
 \usepackage[
@@ -114,20 +112,23 @@
 \titlehead{Freie Universität Berlin\\
            Fachbereich Erziehungswissenschaft und Psychologie}
 
-\subject{Hausarbeit}
+\subject{Forschungsbericht}
 
-\title{Titel der Hausarbeit}
+\title{Einfluss des Migrationshintergrundes auf die Lesekompetenz der Jugendlichen unter Berücksichtigung der ausgewählten Merkmale des kulturellen Kapitals}
 
 %\subtitle{Untertitel, wenn benötigt} 
 
 % (Komma-separierte) Name(n) des oder der Autoren eintragen
-\author{Olga Urbaniak}
+\author{Vorgelegt von: Olga Urbaniak\\
+am 25.September 2015\\
+Matrikelnummer: 4802822\\
+eMail: olga.urbaniak@fu-berlin.de}
 
 % Datum wird automatisch eingetragen beim kompilieren, für manuell einfach ersetzen!
-\date{\today} 
+\date{} 
 
 % Anpassen nach Bedarf, für einzeilig einfach die \\ wegnehmen
-\publishers{Dozenten:\\Prof. Dr. Dozent 1\\Prof. Dr. Dozent 2}
+\publishers{Dozent:\\Prof. Dr. Rainer Watermann\\Proseminar 12042\\Quantitative Verfahren II\\Sommersemester 2015}
 
 
 %%% Beginn des eigentlichen Dokuments
@@ -160,9 +161,6 @@
 
 %%% Tabellenverzeichnis 
 \listoftables
-
-%%% Listings-Verzeichnis 
-\lstlistoflistings
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -209,15 +207,6 @@
 \addcontentsline{toc}{section}{Anhang}
 
 \begin{appendix}
-
-% Hier können jetzt nach belieben Bilder, Tabellen, Karten und sogar ganze PDF-Dokumente eingebunden werden! Z.B.:
-
-%\begin{figure}[htb]
-%\centering
-%\includegraphics[width=\textwidth]{images/map.png}
-%\caption{Bildunterschrift}
-%\label{fig:map.png}
-%\end{figure}
 
 % EInbindung PDF Seiten according to : http://gb01.blogspot.de/2008/03/include-pdf-in-latex.html
 % Globals: include all pages, don't auto scale

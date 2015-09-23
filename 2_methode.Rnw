@@ -27,7 +27,8 @@ Insgesamt umfasst die reduzierte Stichprobe N=3873 Schülerinnen und Schüler.
 
 \subsection{Operationalisierung}
 Die Auswahl der Prädiktoren,
-die einen Einfluss kulturellen Kapitals auf Lesekompetenz haben können,
+die das kulturelle Kapital repräsentieren
+und einen Einfluss auf die Lesekompetenzen haben könnenn,
 wurde durch das Model des Zusammenhangs zwischen den Merkmalen
 des familiären Hintergrundes und schulischem Erfolg
 von Baumert, Watermann und Schümer (2003) inspiriert.
@@ -177,14 +178,14 @@ die endsprechende Antwort auszuwählen:
 
 Alle statistische Verfahren würden mit Hilfe der Software R 3.2.1 (\cite{R}) durchgeführt.
 Zunächst werden deskriptiv die Variablen beschrieben.
-Postulierte Hypothesen werden mit Hilfe von folgenden Statistischen Verfahren überprüft.
-Einfache und multivariate lineare Regression,
+Postulierte Hypothesen werden mit Hilfe von folgenden Statistischen Verfahren überprüft:
+einfache und multivariate lineare Regression,
 Test auf Normalverteilung (Kolmogorow-Smirnow-Lilliefors-Test)
 und einfaktorielle Varianzanalyse (ANOVA).
 In einer Sequenz von Regresionsanalysen
 wird schrittweise der Einfluss von weiteren Prädiktoren überprüft.
 Die Berechnung der Regresionsmodelle und der Vergleich der Regressionsgewichte
-diente der Abklärung ob und in welchen Masse der Migrationshintergrund Einfluss
+diente der Abklärung, ob und in welchen Masse der Migrationshintergrund Einfluss
 auf die vorhergesagte Leseleistung der Jugendlichen nimmt bei Kontrolle der weiteren Prädiktoren.
 Desweiteren soll die Frage beantwortet werden,
 ob weitere Variablen einen Beitrag zur Erklärung der Varianz in der Lesekompetenz leisten.

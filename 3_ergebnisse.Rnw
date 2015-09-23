@@ -63,7 +63,7 @@ latex(
   n.cgroup=c(2, 2),
   booktabs = TRUE,
   rowname = latexTranslate(rownames(tabelle2)),
-  caption="Sprachgebrauch zuhause nach Migrationshintergrund",
+  caption="Sprachgebrauch zuhause nach Migrationshintergrund (N=3873)",
   label="tabelle2"
 )
 @
@@ -94,10 +94,10 @@ latex(
   n.cgroup=c(2, 6),
   booktabs = TRUE,
   rowname = latexTranslate(rownames(tabelle3)),
-  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause",
+  caption="Häufigkeiten, Lage und Streuungsmasse für höchster ISCED in Familie und Anzahl der Bücher zuhause (N=3873)",
   insert.bottom="\\footnotesize{Anmerkung: Mo – Modus, Md – Median
 
-Zuordnung der ISCED Kategorien: 1. ISCED1,2=max.Haupt o. Realschule ohne Berufsausbildung / 2. ISCED 3B,C=Hauptschule und Lehre /3. SCED 3A, 4=Realschule und Fachschule /I4. SCED 5B=Abitur ohne Hochschule / 5.ISCED 5A, 6=min. Hochschulabschluss }",
+Zuordnung der ISCED Kategorien: ISCED1,2=max.Haupt o. Realschule ohne Berufsausbildung / ISCED 3B,C=Hauptschule und Lehre / ISCED 3A, 4=Realschule und Fachschule / ISCED 5B=Abitur ohne Hochschule / ISCED 5A, 6=min. Hochschulabschluss }",
   label="tabelle3"
 )
 @
@@ -123,7 +123,7 @@ latex(
   rowlabel.just="r", 
   booktabs = TRUE,
   rowname = latexTranslate(rownames(tabelle4)),
-  caption="Leseleistung nach Migrationshintergrund (MHG)",
+  caption="Leseleistung nach Migrationshintergrund (MHG) (N=3873)",
   label="tabelle4"
 )
 @
@@ -162,7 +162,8 @@ keine Normalverteilung der Lesekompetenz.
 Für die beiden Gruppen mit Migrationshintergrund war der Test nicht signifikant
 (sie sind Normalverteilt).
 Die einfaktorielle Varianzanalyse (ANOVA) hat bestätigt,
-dass sich mindestens zwei von den Gruppen signifikant voreinander unterscheiden.
+dass sich mindestens zwei von den Gruppen signifikant voreinander unterscheiden
+(F(2,3870)=64.14, p<.001).
 
 \subsection{Einfluss des Migrationshintergrundes auf die Leseleistung der Jugendlichen – einfache lineare Regression.}
 
@@ -174,14 +175,10 @@ dass sich mindestens zwei von den Gruppen signifikant voreinander unterscheiden.
 
 Der Achsenabschnitt bei Model 1 (Tabelle \ref{tabelle5}) liegt bei 516.12.
 Die geschätzte Leseleistung eines Schülers ohne Migrationshintergrund beträgt 516.12 Punkte.
-Die standardisierte vorhergesagte Leseleistung liegt 0,06 Standabweichungen
-über dem Gesamtmittelwert der Leseleistung.
-Das ist ein Effekt unterhalb der Schwellenwerte nach Cohen (\cite{cohen_statistical_1988})
-und ist kein praktisch bedeutsamer Effekt.
 Für einen/e Schüller/in mit Migrationshintergrund in der zweiten Generation
 singt die vorhergesagte Leseleistung um 44.94 Punkte
 und beträgt 471.06.
-Die mittlere vorhergesagte Leseleistung eines Jugendlichen
+Die vorhergesagte Leseleistung eines Jugendlichen
 mit Migrationshintergrund in zweiter Generation
 liegt 0.51 Standardabweichungen unterhalb der mittleren Leistung
 eines Schülers ohne Migrationshintergrund (Referenzkategorie).
@@ -197,15 +194,17 @@ und liegt bei 461.99 Punkten.
 Der Determinationskoeffizient $R^2$ beträgt 0.032.
 Somit konnte 3.2\% der Gesamtvarianz in der Leseleistung
 durch den Migrationshintergrund erklärt werden.
-Das ist ein kleiner aber signifikanter Effekt (Schwellenwerte für $R^2$ nach Cohen).
+Das ist ein kleiner (Schwellenwerte für $R^2$ nach Cohen) aber signifikanter Effekt.
 
 \subsection{Einfluss des Migrationshintergrundes auf die Leseleistung der Jugendlichen bei der Kontrolle ausgewählter Merkmale der Familie (kulturelles Kapital)}
 
 Unter der Hinzunahme in die Regressionsanalyse von weiteren Variablen
+(Model 4)
 verändert sich der Einfluss des Migrationshintergrundes
 auf die Leseleitung der Jugendlichen bedeutsam.
 Der Intercept liegt bei 390.16 Punkten.
-Damit liegt die durchschnittliche Leseleistung in der Refferenzgruppe
+Damit liegt die durchschnittliche Leseleistung in der Referenzgruppe
+(Schüler ohne Migrationshintergrund, die zu Hause deutsch sprechen höchste ISECD 1,2 kaum Bücher zu Hause haben)
 1.37 Standardabweichungen unterhalb des Gesamtmittelwertes
 (ein grosser Effekt nach Cohen).
 Der Effekt des Migrationshintergrundes ist nicht mehr signifikant
@@ -221,13 +220,16 @@ sind hoch signifikant.
 Der Determinationskoeffizient $R^2$ beträgt 0.286.
 Migrationshintergrund, Sprachgebrauch zuhause, Bildungsniveau der Eltern
 und Anzahl der Bücher zuhause erklären zusammen 28.6\% der Gesamtvarianz
-der Leseleistung (ein grosser Effekt nach Cohen).
+der Leseleistung (ein grosser Effekt nach Cohen) und signifikant
+(F(12,3860)=128.6, p<.001).
 Die erklärte Varianz in der sequentiellen Analyse (Model 2-4)
-erhöht sich mit der Zunahme der Familiensprache um 0.6\%.
+erhöht sich mit der Hinzunahme der Familiensprache um 0.6\%.
 Grössere Erklärungskraft hat das Bildungsniveau der Eltern -
 Anstieg der aufgeklärten Varianz um weitere 11.1\%.
 Die Anzahl der zuhause vorhanden Bücher trägt mit zusätzlichen 13.7\%
 am meisten zur Aufklärung der Gesamtvarianz der Leseleistungen bei. 
+Der Unterschied in der aufgeklärten Varianz zwischen dem Model 1 und 4 beträgt 25.4\%.
+Der Modellvergleich hat ergeben, dass Model 4 signifikant mehr zur Aufklärung der Varianz als Model 1 beiträgt (F(10.3860)=137.03, p<.001). 
 
 \subsubsection*{Diskussion}
 
@@ -239,7 +241,7 @@ und 54 Punkte in der zweiten Generation der Fünfzehnjährigen
 mit Migrationshintergrund gegenüber den der deutschen Herkunft
 bedeuten bis zu 2 Schuljahre Kompetenzunterschied (\cite{prenzel_pisa_2007}).
 In Modellen 2 bis 4 haben sich die Veränderungen in dem Einfluss
-des Migrationshintergrundes auf die Lesekompetenz ebenfalls beweisen lassen.
+des Migrationshintergrundes auf die Lesekompetenz ebenfalls nachweisen lassen.
 Bildungsniveau der Eltern und Besitz von Büchern
 haben positiven Einfluss auf die Lesekompetenzen der Jugendlichen.
 Je mehr Kulturgegenstände in einer Familie verfügbar sind,
@@ -247,6 +249,27 @@ je mehr Bücher und bildungsrelevante Ressourcen vorhanden sind,
 desto besser ist der erreichte Testwert.
 Im Gegensatz dazu zeigt sich das Benutzen als Familiensprache
 einer anderen Sprache als Deutsch negativ auf den Erwerb von Lesekompetenz der Jugendlichen.
+
+Das ist ein Befund, der einer näherer Betrachtung bedarf.
+Es wird zwar angenommen, dass der Sprachgebrauch zuhause 
+ein Hinweis auf die Orientierung der Familie auf die Aufnahmekultur sein könnte. 
+Es kann aber genau so sein, dass die Familie die Sprache der Herkunftslandes pflegt 
+und damit den Kindern auch noch ein zusätzliche Fähigkeit zu Verfügung stellt. 
+Es ist eher anzunehmen, dass für den Leistungsrückstand von Migrantenkindern 
+weniger die Benutzung der Herkunftsprache zuhause als die Beherrschung der Testsprache verantwortlich ist. 
+Sprachliche Kompetenzen sind eine Voraussetzung für das erfolgreiche schulische Lernen. 
+Deswegen ist die Weiterentwicklung der schulischen Maßnahmen zur Förderung von Schülerinnen und Schülern 
+mit geringen Sprachkenntnissen beim Erwerb der Landessprache nach wie vor wichtig. 
+In Deutschland werden hauptsächlich Vorbereitungskurse in Deutsch angeboten, 
+bevor die Schülerinnen und Schüler in den Regelunterricht übergehen. 
+Fachunterricht in der Herkunftssprache der Schülerinnen und Schüler 
+findet in Deutschland hingegen kaum statt (\cite{klieme_pisa_2010}). 
+Das könnte für die zugewanderten Kinder und Jugendlichen bedeuten, 
+dass sie in der Zeit, in der sie Deutsch lernen sollen, 
+kaum ihre vorhandenen Kompetenzen in andern Domänen weiterentwickeln. 
+Auch Förderangebote im Vor- und Grundschulbereich genau so wie außerschulische Angebote 
+können die Chancen auf spätere bessere Leistungen der benachteiligten Kinder erhöhen.
+
 In der Arbeit konnte gezeigt werden,
 dass Migrationshintergrund unter der Kontrolle der Dritvariablen,
 die das kulturelle Kapital in der Familie repräsentieren
