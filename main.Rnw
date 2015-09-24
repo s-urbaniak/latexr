@@ -38,7 +38,8 @@
 \onehalfspacing			% Zeilenabstand 1,5
 
 %%% Listings (Quelltext-Darstellungen) formatieren %%%
-\usepackage{listings}
+\usepackage{verbatim}
+
 \definecolor{codegray}{gray}{.95}
 \definecolor{darkblue}{rgb}{0,0,.6}
 \definecolor{darkred}{rgb}{.6,0,0}
@@ -47,14 +48,6 @@
 \definecolor{Tgreen}{HTML}{73D216}	% tango chameleon 2#
 \definecolor{Tlilacdark}{HTML}{5C3566}	% tango plum 3
 \definecolor{Tlilac}{HTML}{75507B}	% tango plum 2
-\lstset{basicstyle=\footnotesize\ttfamily, frame=single, backgroundcolor=\color{white}, breaklines, 		showstringspaces=false,
-  commentstyle=\color{Tlilac}, keywordstyle=\bfseries\color{Tgreen}, stringstyle=\color{darkred},
-  xleftmargin=0.5cm, numbers=left, numberstyle=\footnotesize, stepnumber=1, numbersep=5pt, 
-  literate={ö}{{\"o}}1 % Probleme mit Umlauten in Codeumgebungen umgehen
-           {ä}{{\"a}}1
-           {ü}{{\"u}}1
-           {ß}{{ss}}1
-}
 
 %%% Hyperref-Paket
 \usepackage[
@@ -114,7 +107,7 @@
 
 \subject{Forschungsbericht}
 
-\title{Einfluss des Migrationshintergrundes auf die Lesekompetenz der Jugendlichen unter Berücksichtigung der ausgewählten Merkmale des kulturellen Kapitals}
+\title{Der Einfluss des Migrationshintergrundes auf die Lesekompetenz\\Lineare Regression anhand der PISA-Daten mit R}
 
 %\subtitle{Untertitel, wenn benötigt} 
 
@@ -208,6 +201,9 @@ eMail: olga.urbaniak@fu-berlin.de}
 
 \begin{appendix}
 
+\section{R Skript}
+\section{Eidesstattliche Erklärung}
+
 % EInbindung PDF Seiten according to : http://gb01.blogspot.de/2008/03/include-pdf-in-latex.html
 % Globals: include all pages, don't auto scale
 %\includepdfset{pages=-}
@@ -218,5 +214,5 @@ eMail: olga.urbaniak@fu-berlin.de}
 %\includepdf[landscape, fitpaper]{images/map.pdf}
 
 \end{appendix}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end{document}
